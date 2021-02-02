@@ -23,7 +23,7 @@ def read_pos(str):
     return int(str[0]), int(str[1])
 
 
-def make_pos(tup):
+def
 
 
 
