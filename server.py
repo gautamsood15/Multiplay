@@ -24,7 +24,6 @@ def read_pos(str):
 
 
 def make_pos(tup):
-    return str(tup[0]) + "," + str(tup[1])
 
 
 
