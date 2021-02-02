@@ -23,10 +23,6 @@ def read_pos(str):
     return int(str[0]), int(str[1])
 
 
-def
-
-
-
 pos = [(0,0),(100,100)]
 
 
