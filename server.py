@@ -19,7 +19,7 @@ s.listen(2)     # allows only 2 people to connect to server
 print("Waiting for a connection, Server Started")
 
 def read_pos(str):
-    str = str.split(",")
+
 
 
 
