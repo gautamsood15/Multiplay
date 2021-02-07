@@ -20,7 +20,7 @@ print("Waiting for a connection, Server Started")
 players = [Player(0,0,50,50,(255,0,0)), Player(100,100,50,50,(0,0,255))]
 
 def threaded_client(conn, player):
-    conn.send()
+    conn.send(players[player])
     reply = ""
     while True:
         try:
