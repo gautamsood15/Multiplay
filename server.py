@@ -24,7 +24,7 @@ def threaded_client(conn, player):
     reply = ""
     while True:
         try:
-            data = read_pos(conn.recv(2048).decode())
+            data = read_pos(conn.recv(2048))
             pos[player] = data
 
             if not data:
