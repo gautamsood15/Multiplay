@@ -1,6 +1,6 @@
 import socket
 from _thread import *
-
+from player
 
 server = "192.168.29.245"
 port = 5555
