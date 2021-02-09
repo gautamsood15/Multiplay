@@ -25,7 +25,7 @@ def threaded_client(conn, player):
     while True:
         try:
             data = pickle.loads(conn.recv(2048))
-            pos[player] = data
+            players[player] = data
 
             if not data:
                 print("Disconnected")
