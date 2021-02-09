@@ -32,7 +32,7 @@ def threaded_client(conn, player):
                 break
             else:
                 if player == 1:
-                    reply = pos[0]
+                    reply = players[0]
                 else:
                     reply = pos[1]
                 print("Received: ", data)
