@@ -43,6 +43,7 @@ def threaded_client(conn):
     print("Lost Connection")
     conn.close()
 
+currentPlayer = 0
 
 
 while True:
@@ -50,6 +51,7 @@ while True:
     print("Connected to: ", addr)
 
     start_new_thread(threaded_client, (conn,))
+    currentPlayer += 1
 
 
 
