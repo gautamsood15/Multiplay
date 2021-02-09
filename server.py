@@ -34,7 +34,7 @@ def threaded_client(conn, player):
                 if player == 1:
                     reply = players[0]
                 else:
-                    reply = pos[1]
+                    reply = players[1]
                 print("Received: ", data)
                 print("Sending: ", reply)
 
