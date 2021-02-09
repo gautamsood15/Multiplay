@@ -1,3 +1,4 @@
+import pickle
 import socket
 from _thread import *
 from player import Player
@@ -24,7 +25,7 @@ def threaded_client(conn, player):
     reply = ""
     while True:
         try:
-            data = read_pos(conn.recv(2048))
+            data = pickle.loads(conn.recv(2048))
             pos[player] = data
 
             if not data:
