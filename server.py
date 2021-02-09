@@ -1,7 +1,7 @@
-import pickle
 import socket
 from _thread import *
 from player import Player
+import pickle
 
 server = "192.168.29.245"
 port = 5555
@@ -15,7 +15,6 @@ except socket.error as e:
 
 
 s.listen(2)     # allows only 2 people to connect to server
-
 print("Waiting for a connection, Server Started")
 
 players = [Player(0,0,50,50,(255,0,0)), Player(100,100,50,50,(0,0,255))]
