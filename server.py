@@ -21,7 +21,7 @@ print("Waiting for a connection, Server Started")
 pos = [(0,0),(100,100)]
 
 
-def threaded_client(conn):
+def threaded_client(conn, player):
     conn.send(str.encode("Connected"))
     reply = ""
     while True:
@@ -50,7 +50,7 @@ while True:
     conn, addr = s.accept()
     print("Connected to: ", addr)
 
-    start_new_thread(threaded_client, (conn,))
+    start_new_thread(threaded_client, (conn, currentPlayer))
     currentPlayer += 1
 
 
