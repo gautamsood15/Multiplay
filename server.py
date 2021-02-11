@@ -32,7 +32,7 @@ pos = [(0,0),(100,100)]
 
 
 def threaded_client(conn, player):
-    conn.send(str.encode("Connected"))
+    conn.send(str.encode(make_pos(pos[player])))
     reply = ""
     while True:
         try:
