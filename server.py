@@ -18,7 +18,7 @@ s.listen(2)     # allows only 2 people to connect to server
 
 print("Waiting for a connection, Server Started")
 
-pos = [(0,0),(100,)]
+pos = [(0,0),()]
 
 
 def threaded_client(conn, player):
