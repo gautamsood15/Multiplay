@@ -36,14 +36,18 @@ def threaded_client(conn, player):
     reply = ""
     while True:
         try:
-            data = conn.recv(2048*8)
-            reply = data.decode("utf-8")
+            data = read_pos(conn.recv(2048).decode())
+            pos[player] = data
 
             if not data:
                 print("Disconnected")
                 break
             else:
-                print("Received: ", reply)
+                if player == 1:
+                    reply = pos[0]
+                else:
+                    reply = pos[1]
+                print("Received: ", data)
                 print("Sending: ", reply)
 
             conn.sendall(str.encode(reply))
