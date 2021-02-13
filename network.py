@@ -9,7 +9,7 @@ class Network:
         self.addr = (self.server, self.port)
         self.p = self.connect()
 
-    def getPos(self):
+    def getP(self):
         return self.pos
 
     def connect(self):
