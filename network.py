@@ -7,7 +7,7 @@ class Network:
         self.server = "192.168.29.245"
         self.port = 5555
         self.addr = (self.server, self.port)
-        self.pos = self.connect()
+        self.p = self.connect()
 
     def getPos(self):
         return self.pos
