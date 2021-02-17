@@ -18,6 +18,32 @@ s.listen(2)     # allows only 2 people to connect to server
 
 print("Waiting for a connection, Server Started")
 
+def threaded_client(conn):
+
+    reply = ""
+    while True:
+        try:
+            data = conn.recv(2048*8)
+            reply = data.decode("utf-8")
+
+            if not data:
+                print("Disconnected")
+                break
+            else:
+                print("Received: ", reply)
+                print("Sending: ", reply)
+
+            conn.sendall(str.encode(reply))
+        except:
+            break
+
+
+
+while True:
+    conn, addr = s.accept()
+    print("Connected to: ", addr)
+
+    start_new_thread(threaded_client, (conn,))
 
 
 
