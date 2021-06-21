@@ -20,7 +20,7 @@ class Player():
     def draw(self, win):
         pygame.draw.rect(win, self.color, self.rect)
 
-    def mave(self):
+    def move(self):
         keys = pygame.keys.get_pressed()
 
         if keys[pygame.K_LEFT]:
@@ -45,3 +45,4 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
                 pygame.quit()
+        redrawWindow()
