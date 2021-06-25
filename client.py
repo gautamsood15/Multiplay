@@ -22,7 +22,7 @@ class Player():
         pygame.draw.rect(win, self.color, self.rect)
 
     def move(self):
-        keys = pygame.keys.get_pressed()
+        keys = pygame.key.get_pressed()
 
         if keys[pygame.K_LEFT]:
             self.x -= self.vel
