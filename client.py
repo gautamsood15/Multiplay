@@ -37,17 +37,25 @@ class Player():
             self.y += self.vel
 
 
-def redrawWindow():
+def redrawWindow(win, player):
 
     win.fill((255,255,255))
+    player.draw(win)
     pygame.display.update()
 
 def main():
-    pass
+    run = True
+
+    p = Player(50,50,100,100,(0,255,0))
 
     while run:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
                 pygame.quit()
-        redrawWindow()
+        p.move()
+        redrawWindow(win, p)
+
+
+if __name__ == "__main__":
+    main()
