@@ -16,6 +16,7 @@ class Player():
         self.width = width
         self.color = color
         self.rect = (x,y,width,height)
+        self.vel = 3
 
     def draw(self, win):
         pygame.draw.rect(win, self.color, self.rect)
@@ -24,13 +25,17 @@ class Player():
         keys = pygame.keys.get_pressed()
 
         if keys[pygame.K_LEFT]:
-            pass
+            self.x -= self.vel
+
         if keys[pygame.K_RIGHT]:
-            pass
+            self.x += self.vel
+
         if keys[pygame.K_UP]:
-            pass
+            self.y -= self.vel
+
         if keys[pygame.K_DOWN]:
-            pass
+            self.y += self.vel
+
 
 def redrawWindow():
 
