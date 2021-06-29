@@ -26,10 +26,6 @@ def main():
 
         clock.tick(60)
 
-        p2Pos =
-        p2.update()
-
-
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
