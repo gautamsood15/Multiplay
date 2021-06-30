@@ -16,5 +16,14 @@ class Network:
         except:
             pass
 
-n = Network()
+    def send(self, data):
+        try:
+            self.client.send(str.encode(data))
+            return self.client.recv(2048).decode()
+        except socket.error as e:
+            print(e)
 
+
+n = Network()
+print(n.send("Hello"))
+print(n.send("Working"))
