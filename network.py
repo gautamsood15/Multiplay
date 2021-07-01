@@ -6,8 +6,7 @@ class Network:
         self.server = "192.168.29.245"
         self.port = 5555
         self.addr = (self.server, self.port)
-        self.id = self.connect()
-        print(self.id)
+        self.pos = self.connect()
 
     def connect(self):
         try:
@@ -24,6 +23,3 @@ class Network:
             print(e)
 
 
-n = Network()
-print(n.send("Hello"))
-print(n.send("Working"))
