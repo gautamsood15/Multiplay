@@ -8,6 +8,9 @@ class Network:
         self.addr = (self.server, self.port)
         self.pos = self.connect()
 
+    def getPos(self):
+        return self.pos
+
     def connect(self):
         try:
             self.client.connect(self.addr)
