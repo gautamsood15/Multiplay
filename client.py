@@ -7,17 +7,6 @@ height = 500
 win = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Client")
 
-clientNumber = 0
-
-def read_pos(str):
-    str = str.split(",")
-    return int(str[0]), int(str[1])
-
-
-def make_pos(tup):
-    return str(tup[0]) + "," + str(tup[1])
-
-
 def redrawWindow(win, player, player2):
 
     win.fill((255,255,255))
@@ -37,7 +26,7 @@ def main():
 
         clock.tick(60)
 
-        p2Pos = read_pos(n.send(make_pos((p.x, p.y))))
+        p2Pos = n.send((p.x, p.y))
         p2.x = p2Pos[0]
         p2.y = p2Pos[1]
         p2.update()
