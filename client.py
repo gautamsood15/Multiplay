@@ -26,9 +26,7 @@ def main():
 
         clock.tick(60)
 
-        p2Pos = n.send((p.x, p.y))
-        p2.x = p2Pos[0]
-        p2.y = p2Pos[1]
+        p2Pos =
         p2.update()
 
 
