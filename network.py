@@ -10,7 +10,7 @@ class Network:
         self.p = self.connect()
 
     def getP(self):
-        return self.pos
+        return self.p
 
     def connect(self):
         try:
